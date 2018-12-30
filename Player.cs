@@ -7,22 +7,18 @@ namespace Textworld {
         public char Name;
         public int Index;
         public int Level;
-        public int TotalHp;
+        public int TotalHp => (int) Math.Round(20 + (Level * 5.5));
         public int CurrentHp;
 
-        public int Strength;
-        public int Defense;
+        public int Strength => (int) Math.Round(10 + (Level * 4.5));
+        public int Defense => (int) Math.Round(5 + (Level * 1.3));
         public int Xp;
-        public int ToNext;
+        public int ToNext => (int) Math.Round(20 + (Level == 1? 0:(Level * 15.5)));
         public Player(Char n) {
             Name = n;
             Level = 1;
-            Strength = (int) Math.Round(10 + (Level * 4.5));
-            TotalHp = (int) Math.Round(20 + (Level * 5.5));
             CurrentHp = TotalHp;
-            Defense = (int) Math.Round(5 + (Level * 1.3));
             Xp = 0;
-            ToNext = 20;
         }
         public void Place(List<Rooms> map) {
             Index = r.Next(0, map.Count);
@@ -96,12 +92,8 @@ namespace Textworld {
         }
         public void LevelUp() {
             Level += 1;
-            Strength = (int) Math.Round(10 + (Level * 4.5));
-            TotalHp = (int) Math.Round(20 + (Level * 5.5));
             CurrentHp = TotalHp;
-            Defense = (int) Math.Round(5 + (Level * 1.3));
             Xp = 0;
-            ToNext = (int) Math.Round(20 + (Level * 15.5));
         }
         public void NAttack(Mob mb) {
             int dmg = r.Next(0, Strength) - mb.Defense;

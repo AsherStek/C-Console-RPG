@@ -18,16 +18,16 @@ namespace Textworld {
             Strength = (int) Math.Round(10 + (Level * 4.5));
             Hp = (int) Math.Round(20 + (Level * 5.5));
             Defense = (int) Math.Round(5 + (Level * 1.3));
-            XpReward = (int) Math.Round(4 + (Level *2.5));
+            XpReward = (int) Math.Round(20 + (Level * 10.5));
         }
-        public void NAttack(Player player) {
+        public void NAttack(ref Player player) {
             int dmg = r.Next(0, Strength) - player.Defense;
             if (dmg < 0) {
                 dmg = 0;
             }
             player.CurrentHp -= dmg;
         }
-        public void MAttack(Player player) {
+        public void MAttack(ref Player player) {
             int dmg = 0;
             float chance = 0.7f;
             int outOf = 100;
@@ -42,9 +42,9 @@ namespace Textworld {
         public void MakeChoice(ref Player player) {
             int choice = r.Next(0, 1);
             if (choice == 0) {
-                NAttack(player);
+                NAttack(ref player);
             } else if (choice == 1) {
-                MAttack(player);
+                MAttack(ref player);
             }
         }
     }
