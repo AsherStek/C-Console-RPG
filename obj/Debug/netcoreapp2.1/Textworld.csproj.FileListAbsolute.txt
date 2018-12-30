@@ -1,0 +1,11 @@
+/home/scorpio/VSCode Projects/C#/Textworld/obj/Debug/netcoreapp2.1/Textworld.csprojAssemblyReference.cache
+/home/scorpio/VSCode Projects/C#/Textworld/obj/Debug/netcoreapp2.1/Textworld.csproj.CoreCompileInputs.cache
+/home/scorpio/VSCode Projects/C#/Textworld/obj/Debug/netcoreapp2.1/Textworld.AssemblyInfoInputs.cache
+/home/scorpio/VSCode Projects/C#/Textworld/obj/Debug/netcoreapp2.1/Textworld.AssemblyInfo.cs
+/home/scorpio/VSCode Projects/C#/Textworld/bin/Debug/netcoreapp2.1/Textworld.deps.json
+/home/scorpio/VSCode Projects/C#/Textworld/bin/Debug/netcoreapp2.1/Textworld.runtimeconfig.json
+/home/scorpio/VSCode Projects/C#/Textworld/bin/Debug/netcoreapp2.1/Textworld.runtimeconfig.dev.json
+/home/scorpio/VSCode Projects/C#/Textworld/bin/Debug/netcoreapp2.1/Textworld.dll
+/home/scorpio/VSCode Projects/C#/Textworld/bin/Debug/netcoreapp2.1/Textworld.pdb
+/home/scorpio/VSCode Projects/C#/Textworld/obj/Debug/netcoreapp2.1/Textworld.dll
+/home/scorpio/VSCode Projects/C#/Textworld/obj/Debug/netcoreapp2.1/Textworld.pdb

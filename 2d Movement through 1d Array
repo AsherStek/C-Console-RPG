@@ -1,0 +1,48 @@
+00000
+00P00
+00000
+
+P = Player
+0 = Empty Space
+
+Move Right:
+00000
+000P0
+00000
+
+if (cmd == 'D') {
+    temp = map[player]
+    map[player] = map[player + 1]
+    map[temp] = OGMAP[temp]
+}
+
+Move Left:
+00000
+0P000
+00000
+
+if (cmd == 'A') {
+    temp = map[player]
+    map[player] = map[player - 1]
+    map[temp] = OGMAP[temp]
+}
+
+Move Up:
+00P00
+00000
+00000
+
+if (cmd == 'W') {
+    temp = Index
+    Index -= width
+}
+
+Move Down:
+00000
+00000
+00P00
+
+if (cmd == 'S') {
+    temp = Index
+    Index += width
+}

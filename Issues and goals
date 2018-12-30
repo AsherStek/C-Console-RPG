@@ -1,0 +1,63 @@
+Mobs don't deal damage in the battle event.
+Player can get stuck in Main menu.
+
+Dungeons:
+    Multiple battles in a row
+    reward items and Xp at end
+    Possible Boss Mobs?????
+
+Towns: 
+    Purchase items
+    Pay for stat upgrades/buffs?
+    Recive quests
+
+Player:
+    Add inventory system:
+        Head, Body, Arms, Legs, Feet, Ring1&2, Necklace, R.Hand, L.Head
+        Set of items with one of the labels
+        Each item in a set has Buffs and debuffs and possible special effects
+        Those values affect the same player's value that much
+        Longsword: +3 Strength -2 Speed
+        i.e. R.Hand.Equip(Long Sword) Player.Strength is now Up by 3 and Player.Speed Is down by 2
+    Stats:
+        They need to be properly blanced. All of those numbers are random off the top of my head and I'm it even works as much as it does.
+        Add Speed:
+            Determins turn order, possible use in random events if I make them
+        Add Magic Atk:
+            Power for magical attacks
+            Each spell can have differnt elements that can affect mobs differently
+            Each spell can also have special effects I.e. Slow, Sleep, Burn, Confuse etc
+        Add Magic Def:
+            Just a value for defending against magic.
+    More To Player Creation:
+        Player can obviously choos their Char as of now.
+        Maybe give the player a chance to give the player an actual name
+        Not To rip off TES but Races to give different stats to start with?
+Mob:
+    General:
+        A lot of the same issues that player has are the same here so just assume for most. 
+    Mob Creation:
+        I need more than just a random name and type generator. 
+        I need to make actual classes for each mob type and give unique stats based on type
+World:
+    Urgent:
+        I hope that everything stats to come together quickly but that presents an issue.
+        If the player uses a small map it can be cleared quickly.
+        So 1 of 2 choices
+        Random Respawn/Decay:
+            Mobs will regularly die due to "age"
+            Oasis will dry up the same way
+            Villages that aren't regularly visited can dissaper
+            Dungeons Close up or are defeated
+            At the same time...
+            Mobs randomly spawn around
+            New Oasis will be found
+            Villages are founded
+            New Dungeouns creep up
+        The World:
+            Instead of just staying in one Area you actually move around maps.
+            When you complete a certain amount of objectives in the current map you can choose an option to "Travel"
+            Travel:
+                Choose a direction and move to the "Neighboring" map. 
+                This map is brand new and has all new quests and mobs.
+            You cna continue moving around a large world without runing out of things to do.
