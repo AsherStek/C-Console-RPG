@@ -81,6 +81,7 @@ namespace Textworld {
 
             // Main Game loop
             while (Running) {
+                char pause;
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine();
                 PossibleCommands(WR.Map[Play.Index]);
@@ -119,7 +120,7 @@ namespace Textworld {
                         if (check == "mob") {
                             bool fight = true;
                             while (fight) {
-                                string result = Bat.Fight(Play, WR.Map[Play.Index]);
+                                string result = Bat.Fight(ref Play, WR.Map[Play.Index]);
                                 if (result == "player") {
                                     fight = false;
                                     WR.Display(WIDTH, HEIGHT);
@@ -132,12 +133,19 @@ namespace Textworld {
                         } else if (check == "dungeon") {
 
                         } else if (check == "oasis") {
-                            WR.Map[Play.Index].Oasis.CalcOasis(Play);
-                            Console.WriteLine("------OAIS------");
-                            Console.WriteLine($"Healed for {WR.Map[Play.Index].Oasis.HealAmnt}");
-                            WR.Map[Play.Index].Oasis.Heal(Play);
-                            char pause = (char) Console.Read();
-                            pause = (char) Console.Read();
+                            if (WR.Map[Play.Index].Oasis.Used == false) {
+                                WR.Map[Play.Index].Oasis.CalcOasis(Play);
+                                Console.WriteLine("------OAIS------");
+                                Console.WriteLine($"Healed for {WR.Map[Play.Index].Oasis.HealAmnt}");
+                                WR.Map[Play.Index].Oasis.Heal(Play);
+                                pause = (char) Console.Read();
+                                pause = (char) Console.Read();
+                            } else {
+                                Console.WriteLine("------OAIS------");
+                                Console.WriteLine($"You've Already used this one up");
+                                pause = (char) Console.Read();
+                                pause = (char) Console.Read();
+                            }
                         } else if (check == "town") {
 
                         }

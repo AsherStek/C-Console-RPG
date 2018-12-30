@@ -15,7 +15,7 @@ namespace Textworld {
             'r' // Run
         };
         public char Press;
-        public string Fight(Player player, Rooms rm) {
+        public string Fight(ref Player player, Rooms rm) {
             Console.Clear();
             Console.WriteLine($"-------BATTLE-------");
             Console.WriteLine($"Enemy:");
