@@ -20,7 +20,7 @@ namespace Textworld {
             Console.WriteLine($"-------BATTLE-------");
             Console.WriteLine($"Enemy:");
             Console.WriteLine($"{rm.Monster.Name} the {rm.Monster.Type}");
-            Console.WriteLine($"HP: {rm.Monster.Hp}");
+            Console.WriteLine($"HP: {rm.Monster.CurrentHp}");
             Console.WriteLine($"--------------------");
             Console.WriteLine($"Player:");
             Console.WriteLine($"{player.Name} the Hero");
@@ -56,7 +56,7 @@ namespace Textworld {
                 if (press != ' ') {
                     return "mob";
                 }
-            } else if (rm.Monster.Hp <= 0) {
+            } else if (rm.Monster.CurrentHp <= 0) {
                 bool leveled = false;
                 player.Xp += rm.Monster.XpReward;
                 if (player.Xp >= player.ToNext) {

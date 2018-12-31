@@ -100,7 +100,7 @@ namespace Textworld {
             if (dmg < 0) {
                 dmg = 0;
             }
-            mb.Hp -= dmg;
+            mb.CurrentHp -= dmg;
         }
         public void MAttack(Mob mb) {
             int dmg = 0;
@@ -112,7 +112,7 @@ namespace Textworld {
             if (dmg < 0) {
                 dmg = 0;
             }
-            mb.Hp -= dmg;
+            mb.CurrentHp -= dmg;
         }
         public void Reset() {
             Level = 0;

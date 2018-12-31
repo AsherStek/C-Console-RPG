@@ -29,12 +29,10 @@ namespace Textworld {
             }
             if (TypeInt == 1) {
                 Monster = new Mob(n.PickName(), n.PickType());
-                Monster.SetLevel(TypeInt);
                 HasMob = true;
             }
             if (TypeInt == 2) {
                 Monster = new Mob(n.PickName(), n.PickType());
-                Monster.SetLevel(TypeInt);
                 HasMob = true;
             }
             if (TypeInt == 3) {

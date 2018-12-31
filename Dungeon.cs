@@ -9,7 +9,6 @@ namespace Textworld {
         public Dungeon(int size, int[] levels) {
             for (int i = 0; i < size; i++) {
                 Inhabitants.Add(new Mob(n.PickName(), n.PickType()));
-                Inhabitants[i].SetLevel(r.Next(levels[0], levels[1]));
             }
         }
     }

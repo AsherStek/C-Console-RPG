@@ -6,19 +6,15 @@ namespace Textworld {
         public int Level;
         public string Name;
         public string Type;
-        public int Strength;
-        public int Hp;
-        public int Defense;
-        public int XpReward;
+        public int TotalHp => (int) Math.Round(20 + (Level * 5.5));
+        public int CurrentHp;
+        public int Strength => (int) Math.Round(10 + (Level * 4.5));
+        public int Hp => (int) Math.Round(20 + (Level * 5.5));
+        public int Defense => (int) Math.Round(5 + (Level * 1.3));
+        public int XpReward => (int) Math.Round(20 + (Level * 10.5));
         public Mob(string name, string type) {
             Name = name;
             Type = type;
-        }
-        public void SetLevel(int level) {
-            Strength = (int) Math.Round(10 + (Level * 4.5));
-            Hp = (int) Math.Round(20 + (Level * 5.5));
-            Defense = (int) Math.Round(5 + (Level * 1.3));
-            XpReward = (int) Math.Round(20 + (Level * 10.5));
         }
         public void NAttack(ref Player player) {
             int dmg = r.Next(0, Strength) - player.Defense;
@@ -40,7 +36,7 @@ namespace Textworld {
             player.CurrentHp -= dmg;
         }
         public void MakeChoice(ref Player player) {
-            int choice = r.Next(0, 1);
+            int choice = r.Next(0, 2);
             if (choice == 0) {
                 NAttack(ref player);
             } else if (choice == 1) {
